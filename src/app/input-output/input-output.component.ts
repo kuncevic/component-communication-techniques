@@ -17,10 +17,6 @@ export class InputOutputComponent implements OnInit {
   state: Counter = { ...initialState };
   total: number;
 
-  littleChildValue = initialState.value1;
-  childValue = initialState.value2;
-  parentValue = initialState.value3;
-
   constructor() {}
 
   ngOnInit(): void {
@@ -29,9 +25,6 @@ export class InputOutputComponent implements OnInit {
 
   reset(): void {
     this.state = { ...initialState };
-    this.littleChildValue = initialState.value1;
-    this.childValue = initialState.value2;
-    this.parentValue = initialState.value3;
     this.total = this.sum();
   }
 

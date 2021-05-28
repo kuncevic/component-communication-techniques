@@ -3,9 +3,9 @@
     Container: [Input Output] 🤖
   </div>
   <app-parent
-    [(value)]="parentValue"
-    [(littleChildValue)]="littleChildValue"
-    [(childValue)]="childValue"
+    [(value)]="state.value1"
+    [(littleChildValue)]="state.value2"
+    [(childValue)]="state.value3"
     (valueChange)="parentValueChange($event)"
     (littleChildValueChange)="littleChildValueChange($event)"
     (childValueChange)="childValueChange($event)">
