@@ -3,15 +3,15 @@
     Container: [Input Output] 🤖
   </div>
   <app-parent
-    [value]="parentValue"
-    [littleChildValue]="littleChildValue"
-    [childValue]="childValue"
+    [(value)]="parentValue"
+    [(littleChildValue)]="littleChildValue"
+    [(childValue)]="childValue"
     (valueChange)="parentValueChange($event)"
     (littleChildValueChange)="littleChildValueChange($event)"
     (childValueChange)="childValueChange($event)">
   </app-parent>
   <div>
-    <button (click)="reset()">Total</button>
+    <button (click)="reset()">Reset</button>
     <span class="value">{{ total }}</span>
   </div>
 </div>

@@ -10,8 +10,8 @@
     </div>
   </div>
   <app-child
-    [value]="childValue"
-    [littleChildValue] = "littleChildValue"
+    [(value)]="childValue"
+    [(littleChildValue)] = "littleChildValue"
     (littleChildValueChange)="bubbleLittleChild($event)"
     (valueChange)="bubbleChild($event)">
   </app-child>

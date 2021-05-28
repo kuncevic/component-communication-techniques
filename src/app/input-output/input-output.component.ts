@@ -28,7 +28,11 @@ export class InputOutputComponent implements OnInit {
   }
 
   reset(): void {
-    // this.state = { ...initialState };
+    this.state = { ...initialState };
+    this.littleChildValue = initialState.value1;
+    this.childValue = initialState.value2;
+    this.parentValue = initialState.value3;
+    this.total = this.sum();
   }
 
   childValueChange(event) {
