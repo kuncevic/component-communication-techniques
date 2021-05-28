@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="title">
+    Child 👦
+  </div>
+  <div class="content">
+    <div class="action">
+        <button (click)="updateValue(-1)">-1</button>
+        <span class="value"> {{ value }}</span>
+        <button (click)="updateValue(1)">+1</button>
+    </div>
+  </div>
+  <app-little-child [value]="littleChildValue" (valueChange)="bubbleLittleChild($event)"></app-little-child>
+</div>

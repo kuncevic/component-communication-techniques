@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="title">
+    Container: [Input Output] 🤖
+  </div>
+  <app-parent
+    [value]="parentValue"
+    [littleChildValue]="littleChildValue"
+    [childValue]="childValue"
+    (valueChange)="parentValueChange($event)"
+    (littleChildValueChange)="littleChildValueChange($event)"
+    (childValueChange)="childValueChange($event)">
+  </app-parent>
+  <div>
+    <button (click)="reset()">Total</button>
+    <span class="value">{{ total }}</span>
+  </div>
+</div>
