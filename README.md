@@ -1,11 +1,11 @@
-# Progressive State Management by [Aliaksei Kuncevič](https://twitter.com/kuncevic)
+# Component Communication Techniques by [Aliaksei Kuncevič](https://twitter.com/kuncevic)
 
 ## Run
 
 `yarn`  
 `npm start`
 
-### More stuff about Progressive State Management
+### Checkout more about component communication below 👇
 
 🔥 [Blog series](https://dev.to/kuncevic/series/7784)  
 👨‍💻 [Slides](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)  
