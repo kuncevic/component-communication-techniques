@@ -4,8 +4,8 @@
   </div>
   <app-parent
     [(value)]="state.value1"
-    [(littleChildValue)]="state.value2"
-    [(childValue)]="state.value3"
+    [(childValue)]="state.value2"
+    [(littleChildValue)]="state.value3"
     (valueChange)="parentValueChange($event)"
     (littleChildValueChange)="littleChildValueChange($event)"
     (childValueChange)="childValueChange($event)">
