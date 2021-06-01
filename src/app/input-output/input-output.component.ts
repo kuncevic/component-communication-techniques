@@ -29,17 +29,14 @@ export class InputOutputComponent implements OnInit {
   }
 
   childValueChange(event) {
-    this.state.value1 = event;
     this.total = this.sum();
   }
 
   littleChildValueChange(event) {
-    this.state.value2 = event;
     this.total = this.sum();
   }
 
   parentValueChange(event) {
-    this.state.value3 = event;
     this.total = this.sum();
   }
 
