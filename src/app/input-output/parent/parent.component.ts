@@ -7,27 +7,27 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   @Input() value;
-  @Input() littleChildValue;
+  @Input() nestedChildValue;
   @Input() childValue;
 
   @Output() valueChange = new EventEmitter<number>();
-  @Output() littleChildValueChange = new EventEmitter<number>();
   @Output() childValueChange = new EventEmitter<number>();
+  @Output() nestedChildValueChange = new EventEmitter<number>();
 
   constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   updateValue(value: number): void {
     this.value = this.value + value;
     this.valueChange.emit(this.value);
   }
 
-  bubbleLittleChild(event) {
-    this.littleChildValueChange.emit(event);
-  }
-
   bubbleChild(event) {
     this.childValueChange.emit(event);
+  }
+
+  bubbleNestedChild(event) {
+    this.nestedChildValueChange.emit(event);
   }
 }

@@ -9,5 +9,8 @@
         <button (click)="updateValue(1)">+1</button>
     </div>
   </div>
-  <app-little-child [(value)]="littleChildValue" (valueChange)="bubbleLittleChild($event)"></app-little-child>
+  <app-nested-child
+    [(value)]="nestedChildValue"
+    (valueChange)="bubbleNestedChild($event)">
+  </app-nested-child>
 </div>

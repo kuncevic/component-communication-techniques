@@ -1,11 +1,11 @@
 <div class="wrapper">
   <div class="title">
-    Little Child 👶
+    Nested Child 👶
   </div>
   <div class="content">
     <div class="action">
         <button (click)="updateValue(-1)">-1</button>
-        <span class="value"> {{ value$ | async }}</span>
+        <span class="value"> {{ value }}</span>
         <button (click)="updateValue(1)">+1</button>
     </div>
   </div>

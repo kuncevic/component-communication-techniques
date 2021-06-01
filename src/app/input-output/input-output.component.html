@@ -4,11 +4,11 @@
   </div>
   <app-parent
     [(value)]="state.value1"
-    [(childValue)]="state.value2"
-    [(littleChildValue)]="state.value3"
     (valueChange)="parentValueChange($event)"
-    (littleChildValueChange)="littleChildValueChange($event)"
-    (childValueChange)="childValueChange($event)">
+    [(childValue)]="state.value2"
+    (childValueChange)="childValueChange($event)"
+    [(nestedChildValue)]="state.value3"
+    (nestedChildValueChange)="nestedChildValueChange($event)">
   </app-parent>
   <div>
     <button (click)="reset()">Reset</button>

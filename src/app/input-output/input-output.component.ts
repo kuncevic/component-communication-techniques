@@ -28,15 +28,15 @@ export class InputOutputComponent implements OnInit {
     this.total = this.sum();
   }
 
+  parentValueChange(event) {
+    this.total = this.sum();
+  }
+
   childValueChange(event) {
     this.total = this.sum();
   }
 
-  littleChildValueChange(event) {
-    this.total = this.sum();
-  }
-
-  parentValueChange(event) {
+  nestedChildValueChange(event) {
     this.total = this.sum();
   }
 

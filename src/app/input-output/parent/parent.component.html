@@ -11,8 +11,8 @@
   </div>
   <app-child
     [(value)]="childValue"
-    [(littleChildValue)] = "littleChildValue"
-    (littleChildValueChange)="bubbleLittleChild($event)"
-    (valueChange)="bubbleChild($event)">
+    (valueChange)="bubbleChild($event)"
+    [(nestedChildValue)] = "nestedChildValue"
+    (nestedChildValueChange)="bubbleNestedChild($event)">
   </app-child>
 </div>

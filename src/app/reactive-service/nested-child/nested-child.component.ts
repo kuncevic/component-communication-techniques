@@ -4,12 +4,12 @@ import { map } from 'rxjs/operators';
 import { CounterService } from '../services/counter.service';
 
 @Component({
-  selector: 'app-little-child',
-  templateUrl: './little-child.component.html',
-  styleUrls: ['./little-child.component.scss'],
+  selector: 'app-nested-child',
+  templateUrl: './nested-child.component.html',
+  styleUrls: ['./nested-child.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LittleChildComponent implements OnInit {
+export class NestedChildComponent implements OnInit {
   value$: Observable<number>;
   constructor(private counterStore: CounterService) {}
 

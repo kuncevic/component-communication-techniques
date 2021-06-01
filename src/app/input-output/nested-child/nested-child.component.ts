@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-little-child',
-  templateUrl: './little-child.component.html',
-  styleUrls: ['./little-child.component.scss'],
+  selector: 'app-nested-child',
+  templateUrl: './nested-child.component.html',
+  styleUrls: ['./nested-child.component.scss'],
 })
-export class LittleChildComponent implements OnInit {
+export class NestedChildComponent implements OnInit {
   @Input() value = 0;
   @Output() valueChange = new EventEmitter<number>();
 
