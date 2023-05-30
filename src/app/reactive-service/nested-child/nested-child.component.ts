@@ -2,12 +2,15 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CounterService } from '../services/basic-example/counter.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-nested-child',
-  templateUrl: './nested-child.component.html',
-  styleUrls: ['./nested-child.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-nested-child',
+    templateUrl: './nested-child.component.html',
+    styleUrls: ['./nested-child.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [AsyncPipe],
 })
 export class NestedChildComponent implements OnInit {
   value$: Observable<number>;

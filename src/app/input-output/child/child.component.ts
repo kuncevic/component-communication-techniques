@@ -1,9 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NestedChildComponent } from '../nested-child/nested-child.component';
 
 @Component({
-  selector: 'app-child',
-  templateUrl: './child.component.html',
-  styleUrls: ['./child.component.scss'],
+    selector: 'app-child',
+    templateUrl: './child.component.html',
+    styleUrls: ['./child.component.scss'],
+    standalone: true,
+    imports: [NestedChildComponent],
 })
 export class ChildComponent implements OnInit {
   @Input() value = 0;

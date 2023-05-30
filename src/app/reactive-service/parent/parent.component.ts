@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CounterService } from '../services/basic-example/counter.service';
+import { AsyncPipe } from '@angular/common';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
-  selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.scss'],
+    selector: 'app-parent',
+    templateUrl: './parent.component.html',
+    styleUrls: ['./parent.component.scss'],
+    standalone: true,
+    imports: [ChildComponent, AsyncPipe],
 })
 export class ParentComponent implements OnInit {
   value$: Observable<number>;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ParentComponent } from './parent/parent.component';
 
 interface Counter {
   value1: number;
@@ -9,9 +10,11 @@ interface Counter {
 const initialState: Counter = { value1: 0, value2: 0, value3: 0 };
 
 @Component({
-  selector: 'app-input-output',
-  templateUrl: './input-output.component.html',
-  styleUrls: ['./input-output.component.scss'],
+    selector: 'app-input-output',
+    templateUrl: './input-output.component.html',
+    styleUrls: ['./input-output.component.scss'],
+    standalone: true,
+    imports: [ParentComponent],
 })
 export class InputOutputComponent implements OnInit {
   state: Counter = { ...initialState };
