@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { CounterService } from '../services/counter.service';
+import { CounterService } from '../services/basic-example/counter.service';
 
 @Component({
   selector: 'app-nested-child',

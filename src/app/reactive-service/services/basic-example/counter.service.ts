@@ -19,22 +19,32 @@ export class CounterService {
 
   constructor() {}
 
-  public setValue1(value1): void {
-    const currentData = this.data$.getValue();
-    this.data$.next({ ...currentData, value1: currentData.value1 + value1 });
+  public setValue1(value1: number): void {
+    this.setValue('value1', value1);
   }
 
   public setValue2(value2: number): void {
-    const currentData = this.data$.getValue();
-    this.data$.next({ ...currentData, value2: currentData.value2 + value2 });
+    this.setValue('value2', value2);
   }
 
   public setValue3(value3: number): void {
-    const currentData = this.data$.getValue();
-    this.data$.next({ ...currentData, value3: currentData.value3 + value3 });
+    this.setValue('value3', value3);
   }
 
   public sum(): Observable<number> {
     return this.data$.pipe(map((x) => x.value1 + x.value2 + x.value3));
+  }
+
+  public setValue(key: string, value: number): void {
+    const currentData = this.data$.getValue();
+    this.data$.next({ ...currentData, [key]: currentData[key] + value });
+  }
+
+  public resetState(): void {
+    this.data$.next(initialState);
+  }
+
+  public getState(): Counter {
+    return this.data$.getValue();
   }
 }

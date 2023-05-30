@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterService } from './services/counter.service';
+import { CounterService } from './services/basic-example/counter.service';
 
 @Component({
   selector: 'app-reactive-service',
