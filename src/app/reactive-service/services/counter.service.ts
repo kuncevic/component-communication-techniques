@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { RxService } from 'rx-service';
+import { Rx } from 'rx-service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -14,7 +14,7 @@ const initialState: Counter = { value1: 0, value2: 0, value3: 0 };
 @Injectable({
   providedIn: 'root',
 })
-export class CounterService extends RxService<Counter> {
+export class CounterService extends Rx<Counter> {
   constructor() {
     super(initialState);
   }
