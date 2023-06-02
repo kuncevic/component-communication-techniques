@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterService } from './services/basic-example/counter.service';
+import { CounterService } from './services/counter.service.rxjs';
 import { AsyncPipe } from '@angular/common';
 import { ParentComponent } from './parent/parent.component';
 
 @Component({
-    selector: 'app-reactive-service',
-    templateUrl: './reactive-service.component.html',
-    styleUrls: ['./reactive-service.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [ParentComponent, AsyncPipe],
+  selector: 'app-reactive-service',
+  templateUrl: './reactive-service.component.html',
+  styleUrls: ['./reactive-service.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [ParentComponent, AsyncPipe],
 })
 export class ReactiveServiceComponent implements OnInit {
   total$: Observable<number>;

@@ -14,8 +14,8 @@ const initialState: Counter = { value1: 0, value2: 0, value3: 0 };
   providedIn: 'root',
 })
 export class CounterService {
-  private data$ = new BehaviorSubject<Counter>(initialState);
-  state$ = this.data$.asObservable();
+  private store$ = new BehaviorSubject<Counter>(initialState);
+  state$ = this.store$.asObservable();
 
   constructor() {}
 
@@ -32,19 +32,19 @@ export class CounterService {
   }
 
   public sum(): Observable<number> {
-    return this.data$.pipe(map((x) => x.value1 + x.value2 + x.value3));
+    return this.store$.pipe(map((x) => x.value1 + x.value2 + x.value3));
   }
 
   public setValue(key: string, value: number): void {
-    const currentData = this.data$.getValue();
-    this.data$.next({ ...currentData, [key]: currentData[key] + value });
+    const currentData = this.store$.getValue();
+    this.store$.next({ ...currentData, [key]: currentData[key] + value });
   }
 
   public resetState(): void {
-    this.data$.next(initialState);
+    this.store$.next(initialState);
   }
 
   public getState(): Counter {
-    return this.data$.getValue();
+    return this.store$.getValue();
   }
 }

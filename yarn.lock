@@ -1545,6 +1545,11 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@ngneat/elf@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@ngneat/elf/-/elf-2.3.2.tgz#044e6f61312d3398495b9b5d0bc387107532f5e4"
+  integrity sha512-BMVJos82l9/l00U4G+fjTb1k85SiNDnpn2TbfFq6AWssJO6TmU4Y8SptSEjoYDKIXCne9XW+Ou/jufV6IEINIQ==
+
 "@ngtools/webpack@16.0.3":
   version "16.0.3"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-16.0.3.tgz#e96b5626ae24ccfad8d20876d43ba9433508a599"
