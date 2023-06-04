@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { CounterService } from '../services/counter.service.rxjs';
+import { CounterService } from '../services/counter.service.elf';
 import { AsyncPipe } from '@angular/common';
 import { ChildComponent } from '../child/child.component';
 

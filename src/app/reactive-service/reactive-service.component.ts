@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterService } from './services/counter.service.rxjs';
+import { CounterService } from './services/counter.service.elf';
 import { AsyncPipe } from '@angular/common';
 import { ParentComponent } from './parent/parent.component';
 
